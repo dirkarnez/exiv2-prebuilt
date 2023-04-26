@@ -13,7 +13,7 @@ jobs:
     env:
       libraryName: exiv2
       cmakeInstallationPath: exiv2-installation
-      tagName: 5.2.8.0
+      tagName: v0.27.6
       mingwTargetZip: exiv2-${{ github.ref_name }}-mingw64-x86_64-posix-seh-rev0-8.1.0.zip
     steps:
       - name: git clone

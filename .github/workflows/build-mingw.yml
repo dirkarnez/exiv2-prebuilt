@@ -53,7 +53,7 @@ jobs:
             cmake.exe -G "MinGW Makefiles" ^
             -DCMAKE_BUILD_TYPE=Release ^
             -DZLIB_ROOT="%CD_LINUX%/zlib-v1.2.13-mingw64-x86_64-posix-seh-rev0-8.1.0" ^
-            -Dexpat_DIR="%CD_LINUX%/libexpat-v2.5.0-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/cmake/expat-2.5.0" ^
+            -DEXPAT_ROOT="%CD_LINUX%/libexpat-v2.5.0-mingw64-x86_64-posix-seh-rev0-8.1.0" ^
             -DBUILD_SHARED_LIBS=OFF ^
             -DEXIV2_ENABLE_XMP=ON ^
             -DEXIV2_BUILD_SAMPLES=OFF ^

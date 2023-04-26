@@ -52,10 +52,12 @@ jobs:
             cd exiv2 &&^
             cmake.exe -G "MinGW Makefiles" ^
             -DCMAKE_BUILD_TYPE=Release ^
+            -DDCMAKE_POLICY_DEFAULT_CMP0091=NEW ^
             -DZLIB_ROOT="%CD_LINUX%/zlib-v1.2.13-mingw64-x86_64-posix-seh-rev0-8.1.0" ^
-            -DEXPAT_ROOT="%CD_LINUX%/libexpat-v2.5.0-mingw64-x86_64-posix-seh-rev0-8.1.0" ^
+            -DZLIB_USE_STATIC_LIBS=ON ^
+            -DPC_EXPAT_INCLUDE_DIRS="%CD_LINUX%/libexpat-v2.5.0-mingw64-x86_64-posix-seh-rev0-8.1.0/include" ^
+            -DPC_EXPAT_LIBRARY_DIRS="%CD_LINUX%/libexpat-v2.5.0-mingw64-x86_64-posix-seh-rev0-8.1.0/lib" ^
             -DBUILD_SHARED_LIBS=OFF ^
-            -DEXIV2_ENABLE_XMP=ON ^
             -DEXIV2_BUILD_SAMPLES=OFF ^
             -DEXIV2_BUILD_UNIT_TESTS=OFF ^
             -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
